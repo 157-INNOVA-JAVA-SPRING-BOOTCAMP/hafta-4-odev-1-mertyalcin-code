@@ -7,6 +7,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="hafta-4-odev-1-mertyalcin-code" />
         <module name="SpringMvcSpringDataSpringRest" />
         <module name="hafta-4-odevleri-mertyalcin-code" />
       </profile>
@@ -15,6 +16,7 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="SpringMvcSpringDataSpringRest" options="-parameters" />
+      <module name="hafta-4-odev-1-mertyalcin-code" options="-parameters" />
       <module name="hafta-4-odevleri-mertyalcin-code" options="-parameters" />
     </option>
   </component>

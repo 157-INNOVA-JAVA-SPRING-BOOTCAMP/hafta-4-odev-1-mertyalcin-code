@@ -24,7 +24,7 @@ public class UserController {
     @GetMapping("/register")
     public String getForm(Model model) {
         model.addAttribute("key_form", new UserValidationDto());
-        return "registerform";
+        return "registerformfloating";
     }
 
     // http://localhost:8080/register
@@ -34,7 +34,7 @@ public class UserController {
         if(bindingResult.hasErrors()){
             log.error("Hata var");
             log.info(dto);
-            return "registerform";
+            return "registerformfloating";
         }
         UserEntity newUser= UserEntity.builder()
                 .userId(0L)
