@@ -12,8 +12,10 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.validation.Valid;
+import java.util.List;
 
 @Controller
 @Log4j2
@@ -44,6 +46,11 @@ public class UserController {
         userRepository.save(newUser);
             log.info(dto);
             return "success";
+    }
+    @GetMapping("/user/list")
+    @ResponseBody
+    public Iterable<UserEntity> getUsers() {
+        return userRepository.findAll();
     }
 
 }
